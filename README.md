@@ -39,6 +39,7 @@
   - Runs a ffuf scan
 - Finally it runs a full port scan to check or missed ports
 - All scan results are placed into a single folder in the recon dir `/home/kali/reports/`
+- Last it outputs the time taken for the scan
 
 
 ## Future-Updates
