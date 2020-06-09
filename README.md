@@ -7,7 +7,9 @@
 
 **ezrecon**
 
-![ttystudio GIF](https://raw.githubusercontent.com/chjj/ttystudio/master/img/example.gif)
+<a href="https://imgur.com/9cO4xn9.png">
+  <img src="https://imgur.com/9cO4xn9.png" />
+</a>
 
 ---
 
