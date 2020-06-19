@@ -18,7 +18,6 @@
 - [Installation](#installation)
 - [Requirements](#requirements)
 - [Features](#features)
-- [Documentation](#documentation)
 - [Future Updates](#future-updates)
 ---
 
@@ -26,9 +25,18 @@
 ## Installation
 
 - git clone `https://github.com/dalemazza/ezrecon.git` 
-- run `python3 ezrecon`
+- run `chmod +x ezrecon`
+- run `./ezrecon`
+If you want to run this script globally you can add it your $PATH
 
----
+
+
+## Requirements
+
+- nmap
+- ffuf
+- nikto
+
 
 ## Features
 
@@ -37,13 +45,11 @@
 - If port 80 is found open
   - Runs a Nikto scan
   - Runs a ffuf scan
-- Finally it runs a full port scan to check or missed ports
-- All scan results are placed into a single folder in the recon dir `/home/kali/reports/`
-- Last it outputs the time taken for the scan
+- Runs a full port scan to check for missed ports
+- Compares the ports found in the full and basic scan and outputs any new ports found
+- All scan results are placed into a single folder in the recon dir `$homedir/reports/`
+- Lastly it outputs the time taken for the scan
 
+---
 
 ## Future-Updates
-
-- Fix the input to only accept IP's
-- Fix the directory to cater for non "kali" usernames
-- Compare the new ports found in the full scan against the basic ports
