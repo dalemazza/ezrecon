@@ -92,3 +92,30 @@ if [[ -f "$1" ]]; then
         
         # Conduct the version and OS scan
         conduct_version_os_scan "$ip"
+
+        # Conduct nikto scan
+        conduct_nikto_scan "$ip"
+
+        echo "Scan complete for IP: $ip"
+        echo
+    done < "$ip_file"
+else
+    # If they have provided a single IP
+    ip=$1
+    echo "Scanning IP: $ip"
+
+    # Create a subdirectory for the IP within the main directory
+        output_dir="$directory_name/$ip"
+        mkdir -p "$output_dir"
+        
+        # Conduct the nmap scan
+        conduct_nmap_scan "$ip" "$output_dir"
+        
+        # Conduct the version and OS scan
+        conduct_version_os_scan "$ip" "$output_dir"
+
+        # Conduct nikto scan
+        conduct_nikto_scan "$ip" "$output_dir"
+
+        echo "Scan complete for IP: $ip"
+fi
